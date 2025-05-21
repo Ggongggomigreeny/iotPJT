@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #1a1c20, #2d3436);
+}
+
+body {
+  color: white; /* 텍스트 색상 흰색 */
+  font-family: 'Arial', sans-serif; /* 폰트 지정 */
+  padding: 20px; /* 바깥 여백 */
+  min-height: 100vh; /* 최소 높이 전체 화면 */
+  margin: 0; /* 마진 제거 */
+  display: flex; /* flexbox 레이아웃 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+}
+
+/* h1 제목 스타일: 색상, 그림자, 크기, 아래 여백 */
+h1 {
+  color: #74b9ff; /* 파란색 계열 */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 그림자 효과 */
+  font-size: 2.5em; /* 글자 크기 */
+  margin-bottom: 10px; /* 아래 여백 */
+}
+
+/* h2 부제목 스타일: 색상, 아래 여백 */
+h2 {
+  color: #a8e6cf; /* 연한 초록색 */
+  margin-bottom: 30px; /* 아래 여백 */
+}
+
+/* 버튼들을 감싸는 컨테이너: 가로 정렬, 간격, 아래 여백 */
+.button-container {
+  display: flex; /* 가로로 나열 */
+  gap: 20px; /* 버튼 사이 간격 */
+  margin-bottom: 30px; /* 아래 여백 */
+}
+
+/* 모든 버튼의 기본 스타일 */
+button {
+  background: #6c5ce7; /* 보라색 배경 */
+  color: white; /* 글자색 흰색 */
+  border: none; /* 테두리 없음 */
+  padding: 15px 30px; /* 안쪽 여백 */
+  border-radius: 25px; /* 둥근 테두리 */
+  font-size: 1.1em; /* 글자 크기 */
+  cursor: pointer; /* 마우스 오버 시 포인터 */
+  transition: transform 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2); /* 그림자 */
+}
+
+/* 버튼에 마우스 오버 시 효과 */
+button:hover {
+  transform: translateY(-3px); /* 위로 살짝 이동 */
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4); /* 그림자 강조 */
+}
+
+/* 버튼 클릭 시 효과 */
+button:active {
+  transform: translateY(1px); /* 아래로 살짝 이동 */
+}
+
+/* 텍스트 입력창과 버튼을 감싸는 컨테이너: 가로 정렬, 간격, 위/아래 여백 */
+.input-container {
+  display: flex; /* 가로로 나열 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 10px; /* 요소 사이 간격 */
+  margin-top: 20px; /* 위쪽 여백 */
+  margin-bottom: 10px; /* 아래쪽 여백 */
+}
+
+/* 텍스트 입력창 스타일 */
+#userInput {
+  width: 260px; /* 입력창 너비 */
+  padding: 12px 18px; /* 안쪽 여백 */
+  border: 2px solid #6c5ce7; /* 보라색 테두리 */
+  border-radius: 20px; /* 둥근 테두리 */
+  font-size: 1.1em; /* 글자 크기 */
+  background: #23272f; /* 어두운 배경 */
+  color: #fff; /* 글자색 흰색 */
+  outline: none; /* 포커스 테두리 제거 */
+  transition: border 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.08); /* 그림자 */
+}
+
+/* 입력창에 포커스(클릭) 시 효과 */
+#userInput:focus {
+  border: 2.5px solid #a29bfe; /* 더 진한 보라색 테두리 */
+  box-shadow: 0 4px 16px rgba(162, 155, 254, 0.15); /* 그림자 강조 */
+}
+
+/* 전송 버튼 스타일 */
+#sendBtn {
+  padding: 10px 18px; /* 안쪽 여백 */
+  border: none; /* 테두리 없음 */
+  border-radius: 16px; /* 둥근 테두리 */
+  background: #00b894; /* 초록색 배경 */
+  color: #fff; /* 글자색 흰색 */
+  font-size: 1em; /* 글자 크기 */
+  cursor: pointer; /* 마우스 오버 시 포인터 */
+  transition: background 0.2s, box-shadow 0.2s; /* 애니메이션 효과 */
+  box-shadow: 0 2px 8px rgba(0, 184, 148, 0.15); /* 그림자 */
+}
+
+/* 전송 버튼에 마우스 오버 시 효과 */
+#sendBtn:hover {
+  background: #00cec9; /* 더 밝은 초록색 배경 */
+}
+
+/* 온도/습도 메시지 창 스타일 */
+.sensor-msg {
+  margin-top: 25px;
+  padding: 18px 30px;
+  background: rgba(52, 73, 94, 0.85); /* 반투명 네이비 */
+  color: #ffeaa7; /* 밝은 노란색 글씨 */
+  border-radius: 18px;
+  font-size: 1.18em;
+  font-weight: bold;
+  box-shadow: 0 4px 18px rgba(34, 49, 63, 0.18);
+  letter-spacing: 1px;
+  min-width: 260px;
+  text-align: center;
+  transition: background 0.2s, box-shadow 0.2s;
+}

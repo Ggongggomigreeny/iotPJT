@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- HTML5 문서임을 선언 -->
+<html> <!-- HTML 문서의 루트(root) 요소 -->
+
+<head> <!-- 문서의 메타데이터(정보)와 외부 리소스 포함 -->
+  <meta charset="utf-8"> <!-- 문자 인코딩을 UTF-8로 설정 -->
+  <meta name="viewport" content="width=device-width"> <!-- 반응형 웹을 위한 뷰포트 설정 -->
+  <title>iot 공부할거거든</title> <!-- 브라우저 탭에 표시될 제목 -->
+  <link href="style.css" rel="stylesheet" type="text/css" /> <!-- 외부 CSS 파일 연결 -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script> <!-- Firebase 라이브러리 로드 -->
+</head>
+
+<body> <!-- 실제 페이지에 표시되는 콘텐츠 영역 -->
+    <h1>반도체 소프트웨어</h1> <!-- 가장 큰 제목(Heading 1) -->
+    <h2>IoT programming</h2> <!-- 두 번째로 큰 제목(Heading 2) -->
+    <img id="img" src="ledoff.png" width=20%> <!-- LED 상태를 나타내는 이미지, id로 JS에서 접근 가능 -->
+    <div class="button-container"> <!-- 버튼들을 감싸는 컨테이너, CSS 스타일링에 사용 -->
+      <button type="button" onclick="ledOn()">Led on</button> <!-- 클릭 시 ledOn() 함수 실행 -->
+      <button type="button" onclick="ledOff()">Led off</button> <!-- 클릭 시 ledOff() 함수 실행 -->
+    </div>
+    <div class="input-container"> <!-- 입력창과 버튼을 감싸는 컨테이너 -->
+      <input type="text" id="userInput" placeholder="영문만 입력하세요">
+      <button id="sendBtn" type="button">Send</button>
+    </div>
+    <!-- 온도/습도 메시지 표시 영역 추가 -->
+    <div id="sensorMsg" class="sensor-msg"></div>
+    <script src="script.js"></script> <!-- 외부 JavaScript 파일 연결 -->
+</body>
+
+</html> <!-- HTML 문서의 끝 -->
